@@ -29,7 +29,7 @@ def main(cfg):
     epoch_time_logger = LogEpochTimeCallback()
     trainer.callbacks.extend([lr_logger, epoch_time_logger])
     
-    set_num_threads(4) # 降低CPU占用.比较有效.
+    set_num_threads(2) # 降低CPU占用.比较有效.
     trainer.fit(model)
 
 
